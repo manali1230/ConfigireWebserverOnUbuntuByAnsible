@@ -1,0 +1,19 @@
+- name: Launch Webserver on Ubuntu
+  hosts: UbuntuOS
+  tasks:
+    - name: Install Apache2
+      package:
+        name: apache2
+        state: present
+
+    - name: copy file to /var/www/html directory
+      copy: 
+        content: this is Ubuntu OS !!
+        dest: /var/www/html/page.html
+
+    - name: Start service
+      service:
+        name: apache2
+        state: started
+
+    

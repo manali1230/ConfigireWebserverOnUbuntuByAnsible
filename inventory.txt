@@ -1,0 +1,2 @@
+[UbuntuOS]
+192.168.43.112 ansible_user=manali ansible_ssh_pass=komal ansible_connection=ssh
